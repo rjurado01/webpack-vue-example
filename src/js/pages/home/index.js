@@ -1,4 +1,4 @@
-import template from "./home.pug";
+import template from "./index.pug";
 import ExampleComponent from "js/components/example/example.js";
 
 export default Vue.extend({
