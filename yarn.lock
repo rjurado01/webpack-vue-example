@@ -716,6 +716,29 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@ionic/core@^4.6.0":
+  version "4.11.10"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@ionic/core/-/core-4.11.10.tgz#1aa5f2e31b8d0c741471af9c272964c34155ab5a"
+  integrity sha512-PeonKl5E+VOTBeKDr83y0N/1wbfkZ5jV3PSJTsVPE3Q15LxGEO0GzBvVMgkmkssuqOI3WJPXxYWZVL8ejzSFOQ==
+  dependencies:
+    ionicons "^4.6.3"
+    tslib "^1.10.0"
+
+"@ionic/core@^5.0.1":
+  version "5.0.1"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@ionic/core/-/core-5.0.1.tgz#20a8070b35bfe5943672506333d7abb07638aef0"
+  integrity sha512-/Vk55ctiQNwvmJRoylM+gFYYzTeDt9OC5l+oRtxTxinWjzSvXrA21ZYxVvACHn1xNbHtHM4L6KJON/qhc6i7JA==
+  dependencies:
+    ionicons "^5.0.0"
+    tslib "^1.10.0"
+
+"@ionic/vue@^0.0.9":
+  version "0.0.9"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@ionic/vue/-/vue-0.0.9.tgz#d38f0a65f54d5d4d081c52ae45bd9313ec608de6"
+  integrity sha512-FLirjbMtVDL9KgodtKNs7iid8oCabKDnROdgBaQEC5W7MoasaUMjMZfi9bq/UItfoq8yBl8tXW+lEKrv11NJlg==
+  dependencies:
+    "@ionic/core" "^4.6.0"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -3382,6 +3405,16 @@ invert-kv@^2.0.0:
   version "2.0.0"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
+
+ionicons@^4.6.3:
+  version "4.6.3"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/ionicons/-/ionicons-4.6.3.tgz#e4f3a3e9b66761eb8c0db27798cc1a8ce97777d2"
+  integrity sha512-cgP+VIr2cTJpMfFyVHTerq6n2jeoiGboVoe3GlaAo5zoSBDAEXORwUZhv6m+lCyxlsHCS3nqPUE+MKyZU71t8Q==
+
+ionicons@^5.0.0:
+  version "5.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/ionicons/-/ionicons-5.0.0.tgz#a97c37af0ba48eaafe9c411299af87722ccbbedf"
+  integrity sha512-tqKI5QyqCQOikbWYIA7teJPPXKfYZhEff8ARvbkOIh7PWbKI7sd0IBJcjhbw/mUilIA7U9Bcdm7qGBPhVWOCWg==
 
 ip-regex@^2.1.0:
   version "2.1.0"
@@ -6269,7 +6302,7 @@ trim-newlines@^1.0.0:
   dependencies:
     glob "^7.1.2"
 
-tslib@^1.9.0:
+tslib@^1.10.0, tslib@^1.9.0:
   version "1.11.0"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/tslib/-/tslib-1.11.0.tgz#f1f3528301621a53220d58373ae510ff747a66bc"
   integrity sha512-BmndXUtiTn/VDDrJzQE7Mm22Ix3PxgLltW9bSNLoeCY31gnG2OPx0QqJnuc9oMIKioYrz487i6K9o4Pdn0j+Kg==

@@ -8,6 +8,23 @@ export default Vue.extend({
   },
   data() {
     return {
+      menuOptions: [
+        {
+          title : "Home",
+          url   : "/home",
+          icon  : "home"
+        },
+        {
+          title : "Chat",
+          url   : "/chat",
+          icon  : "chatboxes"
+        },
+        {
+          title : "Contacts",
+          url   : "/contacts",
+          icon  : "contacts"
+        }
+      ]
     }
   },
   methods: {

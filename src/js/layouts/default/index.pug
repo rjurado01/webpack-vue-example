@@ -1,2 +1,27 @@
-#layout_default
-  router-view
+ion-app
+  ion-menu(side='start' menu-id='first' content-id='main')
+    ion-header
+      ion-toolbar(color='primary')
+        ion-title Start Menu
+    ion-content
+      ion-list.md.list-md.hydrated
+        ion-item.item.md.in-list.ion-focusable.item-label.hydrated
+          ion-icon().md.hydrated(name='mail' slot='start' role='img' aria-label='mail')
+          ion-label.sc-ion-label-md-h.sc-ion-label-md-s.md.hydrated Inbox
+
+        ion-item.item.md.in-list.ion-focusable.item-label.hydrated
+          ion-icon.md.hydrated(name='archive' slot='start' role='img' aria-label='archive')
+          ion-label.sc-ion-label-md-h.sc-ion-label-md-s.md.hydrated Archived
+
+
+  //- ion-router-outlet#main
+  ion-page
+    ion-header
+      ion-toolbar(color='primary')
+        ion-buttons.buttons-first-slot.sc-ion-buttons-md-h.sc-ion-buttons-md-s.md.hydrated(slot='start')
+          ion-menu-button.md.button.in-toolbar.ion-activatable.ion-focusable.hydrated
+
+        ion-title Home
+
+    ion-content
+      router-view#main

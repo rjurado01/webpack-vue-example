@@ -17,7 +17,8 @@ module.exports = env => {
         {
           test: /\.js$/, // compile javascript files
           include: [
-            path.resolve(__dirname, 'src')
+            path.resolve(__dirname, 'src'),
+            path.resolve(__dirname, 'node_modules/@ionic')
           ],
           loader: 'babel-loader',
           query: {
@@ -30,7 +31,7 @@ module.exports = env => {
                   firefox: 58
                 },
                 useBuiltIns: 'usage',
-                "corejs": 3
+                corejs: 3
               }]
             ]
           }
@@ -41,7 +42,8 @@ module.exports = env => {
             path.resolve(__dirname, 'src/assets'),
             path.resolve(__dirname, 'src/scss/assets'),
             path.resolve(__dirname, 'node_modules/element-ui/lib/theme-chalk/fonts'),
-            path.resolve(__dirname, 'node_modules/jsoneditor/dist/img')
+            path.resolve(__dirname, 'node_modules/jsoneditor/dist/img'),
+            path.resolve(__dirname, 'node_modules/@ionic')
           ],
           loader: 'file-loader?name=assets/[hash].[ext]',
           options: {esModule: false}
@@ -77,7 +79,7 @@ module.exports = env => {
         _: 'lodash',
         API: [path.resolve(__dirname, 'src/js/services/api.js'), 'default']
       }),
-      new CleanWebpackPlugin(),
+      new CleanWebpackPlugin()
     ],
     devtool: 'source-map'
   };
@@ -87,9 +89,10 @@ module.exports = env => {
     config.output.path = path.resolve(__dirname, 'dev');
 
     config.module.rules.push({
-      test: /\.scss$/, // compile scss files
+      test: /\.(scss|css)$/, // compile scss files
       include: [
-        path.resolve(__dirname, 'src/scss')
+        path.resolve(__dirname, 'src/scss'),
+        path.resolve(__dirname, 'node_modules/@ionic')
       ],
       loaders: ['style-loader', 'css-loader', 'sass-loader']
     });
