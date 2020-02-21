@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPLugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // Entorno Base
@@ -43,7 +43,8 @@ module.exports = env => {
             path.resolve(__dirname, 'node_modules/element-ui/lib/theme-chalk/fonts'),
             path.resolve(__dirname, 'node_modules/jsoneditor/dist/img')
           ],
-          loader: 'file-loader?name=assets/[hash].[ext]'
+          loader: 'file-loader?name=assets/[hash].[ext]',
+          options: {esModule: false}
         },
         {
           test: /\.pug$/, // compile .pug templates
@@ -76,8 +77,7 @@ module.exports = env => {
         _: 'lodash',
         API: [path.resolve(__dirname, 'src/js/services/api.js'), 'default']
       }),
-      new CleanWebpackPlugin({
-      }),
+      new CleanWebpackPlugin(),
     ],
     devtool: 'source-map'
   };
