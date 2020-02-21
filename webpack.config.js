@@ -10,7 +10,7 @@ module.exports = env => {
     entry: './src/js/main.js',
     output: {
       filename: 'application.js',
-      sourceMapFilename: 'application.map'
+      sourceMapFilename: 'application.map[query]'
     },
     module: {
       rules: [
@@ -107,7 +107,7 @@ module.exports = env => {
   }
   // Entorno de Producción
   else {
-    config.output.path = path.resolve(__dirname, 'dist');
+    config.output.path = path.resolve(__dirname, 'cordova/www');
     config.output.filename = 'application.[hash].js';
 
     config.module.rules.push({
@@ -122,6 +122,7 @@ module.exports = env => {
       ]
     });
 
+    config.plugins.push(new CleanWebpackPlugin());
     config.plugins.push(new MiniCssExtractPlugin({filename: 'application.[hash].css'}));
   }
 
