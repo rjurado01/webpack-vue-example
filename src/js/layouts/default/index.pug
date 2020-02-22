@@ -6,13 +6,17 @@ ion-app.h-100
 
     ion-content
       ion-list
-        ion-item
-          ion-icon(name='mail' slot='start' role='img' aria-label='mail')
-          ion-label Inbox
+        ion-menu-toggle
+          router-link(to='/login')
+            ion-item
+              ion-icon(name='log-in' slot='start' role='img' aria-label='mail')
+              ion-label Login
 
-        ion-item
-          ion-icon(name='archive' slot='start' role='img' aria-label='archive')
-          ion-label Archived
+        ion-menu-toggle
+          router-link(to='/home')
+            ion-item
+              ion-icon(name='list' slot='start' role='img' aria-label='archive')
+              ion-label Tasks list
 
   //- ion-router-outlet#main
   ion-page.h-100

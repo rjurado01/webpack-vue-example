@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router';
 
+import Login from "./pages/login/index.js";
 import Home from "./pages/home/index.js";
 
 Vue.use(VueRouter);
@@ -10,6 +11,14 @@ const routes = [
   {
     path: '/home',
     component: Home,
+    meta: {
+      layout: 'default',
+      auth: false
+    }
+  },
+  {
+    path: '/login',
+    component: Login,
     meta: {
       layout: 'default',
       auth: false

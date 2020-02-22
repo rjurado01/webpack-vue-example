@@ -8,7 +8,7 @@ import i18n from 'js/i18n.js';
 import Icon from 'vue-awesome';
 
 import {addIcons} from 'ionicons';
-import {archive, menuSharp, mail} from 'ionicons/icons';
+import {logIn, list, menuSharp} from 'ionicons/icons';
 
 /* https://github.com/ionic-team/ionic-docs/issues/446#issuecomment-583018126 */
 import {defineCustomElements} from '@ionic/core/loader';
@@ -16,8 +16,8 @@ import {defineCustomElements} from '@ionic/core/loader';
 defineCustomElements(window).then(() => { /* Ionic is loaded! */ });
 
 addIcons({
-  'mail': mail,
-  'archive': archive,
+  'log-in': logIn,
+  'list': list,
   'menu-sharp': menuSharp,
 });
 
