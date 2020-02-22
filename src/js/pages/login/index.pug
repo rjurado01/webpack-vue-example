@@ -1,11 +1,16 @@
-ion-grid
-  form.ion-padding
-    ion-item
-      ion-label(floating='') Email
-      ion-input(type='email' name='email' clearinput='true')
+ion-grid.ion-text-center.h-100
+  ion-row.ion-align-items-center.h-100
+    ion-col
+      // Logo
+      img.w-25.ion-margin-top(src=require('assets/images/ionic.png'))
 
-    ion-item
-      ion-label(floating='') Password
-      ion-input(type='password' name='pass' clearinput='true')
+      form.ion-padding(@submit.prevent='submit')
+        ion-item
+          ion-label(floating='') Email
+          v-input(type='email' name='email' v-model='data.email')
 
-    ion-button.ion-margin-top(type='submit' expand='block') Login
+        ion-item
+          ion-label(floating='') Password
+          v-input(type='password' name='pass' v-model='data.password')
+
+        ion-button.ion-margin-top(type='submit' expand='block') Login 

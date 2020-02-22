@@ -1,4 +1,5 @@
 import DefaultLayout from 'js/layouts/default';
+import BlankLayout from 'js/layouts/blank';
 
 import 'js/vue-resource-config';
 
@@ -28,16 +29,12 @@ Vue.store = store;
 Vue.i18n = i18n;
 Vue.config.ignoredElements = [/^ion-/];
 
-// Vue.component('v-icon', Icon);
-// Vue.use(Ionic);
-
-// Create and mount the root instance.
-// Make sure to inject the router with the router option to make the whole app router-aware.
 new Vue({
   router,
   store,
   i18n,
   components: {
-    DefaultLayout
+    DefaultLayout,
+    BlankLayout
   }
 }).$mount('#app');

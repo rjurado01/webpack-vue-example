@@ -20,11 +20,11 @@ const routes = [
     path: '/login',
     component: Login,
     meta: {
-      layout: 'default',
+      layout: 'blank',
       auth: false
     }
   },
-  { path: '*', redirect: '/home' }
+  { path: '*', redirect: '/login' }
 ]
 
 const router = new VueRouter({routes});
