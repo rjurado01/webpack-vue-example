@@ -42,8 +42,7 @@ module.exports = env => {
             path.resolve(__dirname, 'src/assets'),
             path.resolve(__dirname, 'src/scss/assets'),
             path.resolve(__dirname, 'node_modules/element-ui/lib/theme-chalk/fonts'),
-            path.resolve(__dirname, 'node_modules/jsoneditor/dist/img'),
-            path.resolve(__dirname, 'node_modules/@ionic')
+            path.resolve(__dirname, 'node_modules/jsoneditor/dist/img')
           ],
           loader: 'file-loader?name=assets/[hash].[ext]',
           options: {esModule: false}

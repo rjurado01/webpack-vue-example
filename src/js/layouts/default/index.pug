@@ -5,22 +5,21 @@ ion-app.h-100
         ion-title Start Menu
 
     ion-content
-      ion-list.md.list-md.hydrated
-        ion-item.item.md.in-list.ion-focusable.item-label.hydrated
-          ion-icon.md.hydrated(name='mail' slot='start' role='img' aria-label='mail')
-          ion-label.sc-ion-label-md-h.sc-ion-label-md-s.md.hydrated Inbox
+      ion-list
+        ion-item
+          ion-icon(name='mail' slot='start' role='img' aria-label='mail')
+          ion-label Inbox
 
-        ion-item.item.md.in-list.ion-focusable.item-label.hydrated
-          ion-icon.md.hydrated(name='archive' slot='start' role='img' aria-label='archive')
-          ion-label.sc-ion-label-md-h.sc-ion-label-md-s.md.hydrated Archived
-
+        ion-item
+          ion-icon(name='archive' slot='start' role='img' aria-label='archive')
+          ion-label Archived
 
   //- ion-router-outlet#main
   ion-page.h-100
     ion-header
       ion-toolbar(color='primary')
-        ion-buttons.buttons-first-slot.sc-ion-buttons-md-h.sc-ion-buttons-md-s.md.hydrated(slot='start')
-          ion-menu-button.md.button.in-toolbar.ion-activatable.ion-focusable.hydrated
+        ion-buttons(slot='start')
+          ion-menu-button
 
         ion-title Home
 
