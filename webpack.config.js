@@ -12,6 +12,11 @@ module.exports = env => {
       filename: 'application.js',
       sourceMapFilename: 'application.map'
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
     module: {
       rules: [
         {
@@ -30,7 +35,7 @@ module.exports = env => {
                   firefox: 58
                 },
                 useBuiltIns: 'usage',
-                "corejs": 3
+                "corejs": {version: 3}
               }]
             ]
           }
@@ -76,8 +81,7 @@ module.exports = env => {
         Vue: 'vue',
         _: 'lodash',
         API: [path.resolve(__dirname, 'src/js/services/api.js'), 'default']
-      }),
-      new CleanWebpackPlugin(),
+      })
     ],
     devtool: 'source-map'
   };
@@ -100,7 +104,9 @@ module.exports = env => {
       port: process.env.PORT || 8000
     };
 
-    config.plugins.push();
+    config.plugins.push(new CleanWebpackPlugin({
+      cleanAfterEveryBuildPatterns: ['dev']
+    }));
   }
   // Entorno de Producción
   else {
@@ -119,6 +125,7 @@ module.exports = env => {
       ]
     });
 
+    config.plugins.push(new CleanWebpackPlugin());
     config.plugins.push(new MiniCssExtractPlugin({filename: 'application.[hash].css'}));
   }
 
