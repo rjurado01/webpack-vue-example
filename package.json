@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.0",
-    "lodash": "^4.0",
+    "lodash": "^4.17",
     "uglify-js": "^3.0",
     "vue": "^2.0",
     "vue-awesome": "^4.0",
