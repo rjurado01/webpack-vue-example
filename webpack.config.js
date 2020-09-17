@@ -64,10 +64,7 @@ module.exports = env => {
       modules: [
         path.resolve('./src'),
         'node_modules'
-      ],
-      alias: { // make vue global accesible
-        'vue$': 'vue/dist/vue.common.js'
-      }
+      ]
     },
     plugins: [
       new webpack.DefinePlugin({

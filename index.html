@@ -1,0 +1,29 @@
+<script src="node_modules/vue/dist/vue.global.js"></script>
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
+    <title>Demo</title>
+  </head>
+  <body>
+    <div id="app">
+    </div>
+  </body>
+</html>
+
+<script>
+Vue.createApp({
+  setup() {
+    const msg = Vue.ref('Hello World !');
+    return {
+      msg
+    }
+  },
+  template: `
+    <div>
+      Test : {{ msg }}
+    </div>
+  `
+}).mount('#app')
+</script>
