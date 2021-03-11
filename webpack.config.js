@@ -9,13 +9,7 @@ module.exports = env => {
   config = {
     entry: './src/js/main.js',
     output: {
-      filename: 'application.js',
-      sourceMapFilename: 'application.map'
-    },
-    optimization: {
-      splitChunks: {
-        chunks: 'all'
-      }
+      filename: 'application.js'
     },
     module: {
       rules: [
@@ -24,39 +18,32 @@ module.exports = env => {
           include: [
             path.resolve(__dirname, 'src')
           ],
-          loader: 'babel-loader',
-          query: {
-            presets: [
-              ['@babel/preset-env', {
-                targets: {
-                  safari: 10,
-                  ie: 11,
-                  chrome: 64,
-                  firefox: 58
-                },
-                useBuiltIns: 'usage',
-                "corejs": {version: 3}
-              }]
-            ]
+          use: {
+            loader: 'babel-loader'
           }
         },
         {
-          test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i, // compile assets
+          test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i, // compile scss files
           include: [
             path.resolve(__dirname, 'src/assets'),
-            path.resolve(__dirname, 'src/scss/assets'),
-            path.resolve(__dirname, 'node_modules/element-ui/lib/theme-chalk/fonts'),
-            path.resolve(__dirname, 'node_modules/jsoneditor/dist/img')
+            path.resolve(__dirname, 'src/scss/assets')
           ],
-          loader: 'file-loader?name=assets/[hash].[ext]',
-          options: {esModule: false}
+          use: {
+            loader: 'file-loader?name=assets/[fullhash].[ext]',
+            options: {
+              outputPath: 'assets',
+              esModule: false
+            }
+          }
         },
         {
           test: /\.pug$/, // compile .pug templates
           include: [
             path.resolve(__dirname, 'src')
           ],
-          loader: 'pug-loader'
+          use: {
+            loader: 'pug-loader'
+          }
         }
       ]
     },
@@ -79,15 +66,14 @@ module.exports = env => {
       }),
       new webpack.ProvidePlugin({
         Vue: 'vue',
-        _: 'lodash',
-        API: [path.resolve(__dirname, 'src/js/services/api.js'), 'default']
+        _: 'lodash'
       })
     ],
     devtool: 'source-map'
   };
 
   // Entorno de Desarrollo
-  if (env === 'development') {
+  if (env.development) {
     config.output.path = path.resolve(__dirname, 'dev');
 
     config.module.rules.push({
@@ -95,7 +81,7 @@ module.exports = env => {
       include: [
         path.resolve(__dirname, 'src/scss')
       ],
-      loaders: ['style-loader', 'css-loader', 'sass-loader']
+      use: ['style-loader', 'css-loader', 'sass-loader']
     });
 
     config.devServer = {
@@ -111,7 +97,7 @@ module.exports = env => {
   // Entorno de Producción
   else {
     config.output.path = path.resolve(__dirname, 'dist');
-    config.output.filename = 'application.[hash].js';
+    config.output.filename = 'application.[chunkhash].js';
 
     config.module.rules.push({
       test: /\.scss$/, // compile scss files
@@ -126,7 +112,7 @@ module.exports = env => {
     });
 
     config.plugins.push(new CleanWebpackPlugin());
-    config.plugins.push(new MiniCssExtractPlugin({filename: 'application.[hash].css'}));
+    config.plugins.push(new MiniCssExtractPlugin({filename: 'application.[chunkhash].css'}));
   }
 
   return config;
