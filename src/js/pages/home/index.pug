@@ -1,13 +1,6 @@
 div
   h1 Home
 
-  p {{ $t("example") }}
+  p Vuex Count: {{ count }}
 
-  .image
-
-  img(src=require('assets/images/logo.png'))
-
-  p.icon-office Office
-  p.icon-pacman Pacman
-
-  example-component
+  button(@click="increment") Increment

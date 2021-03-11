@@ -66,7 +66,7 @@ module.exports = env => {
         'node_modules'
       ],
       alias: { // make vue global accesible
-        'vue$': 'vue/dist/vue.common.js'
+        'vue$': 'vue/dist/vue.esm-bundler'
       }
     },
     plugins: [

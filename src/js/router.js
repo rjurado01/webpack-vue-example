@@ -1,31 +1,23 @@
-import VueRouter from 'vue-router';
-
+import { createWebHashHistory, createRouter } from "vue-router";
 import Home from "./pages/home/index.js";
-
-Vue.use(VueRouter);
-
-const RouteParent = {render(c) { return c('router-view'); }};
+import About from "./pages/about/index.js";
 
 const routes = [
   {
-    path: '/home',
+    path: "/",
+    name: "Home",
     component: Home,
-    meta: {
-      layout: 'default',
-      auth: false
-    }
   },
-  { path: '*', redirect: '/home' }
-]
+  {
+    path: "/about",
+    name: "About",
+    component: About,
+  },
+];
 
-const router = new VueRouter({routes});
-
-const checkPermission = (route) => {
-  return !route.meta.auth === true;
-};
-
-router.beforeEach((to, from, next) => {
-  next(checkPermission(to));
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes
 });
 
 export default router;

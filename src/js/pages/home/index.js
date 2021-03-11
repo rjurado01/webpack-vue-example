@@ -1,15 +1,18 @@
 import template from "./index.pug";
-import ExampleComponent from "js/components/example/example.js";
 
-export default Vue.extend({
+export default {
   template: template(),
-  components: {
-    ExampleComponent
-  },
-  data() {
-    return {
+  computed: {
+    count() {
+      return this.$store.state.count
     }
   },
+  setup() {
+    console.log('home')
+  },
   methods: {
+    increment() {
+      this.$store.commit('increment')
+    }
   }
-});
+}
