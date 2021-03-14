@@ -1,0 +1,22 @@
+@for $i from 1 through 10 {
+  .h-#{$i} { height: calc(var(--size) * #{$i}); }
+  .w-#{$i} { width: calc(var(--size) * #{$i}); }
+
+  .m-#{$i} { margin: calc(var(--size) * #{$i}); }
+  .mb-#{$i} { margin-bottom: calc(var(--size) * #{$i}); }
+  .mt-#{$i} { margin-top: calc(var(--size) * #{$i}); }
+  .mr-#{$i} { margin-right: calc(var(--size) * #{$i}); }
+  .ml-#{$i} { margin-left: calc(var(--size) * #{$i}); }
+  // .mx-#{$i} { margin-right: calc(var(--size) * #{$i}); margin-left: calc(var(--size) * #{$i}); }
+  // .my-#{$i} { margin-top: calc(var(--size) * #{$i}); margin-bottom: calc(var(--size) * #{$i}); }
+
+  .p-#{$i}	{ padding: calc(var(--size) * #{$i}); }
+  .py-#{$i}	{ padding-top: calc(var(--size) * #{$i}); padding-bottom: calc(var(--size) * #{$i}); }
+  .px-#{$i}	{ padding-right: calc(var(--size) * #{$i}); padding-left: calc(var(--size) * #{$i}); }
+
+  // .top-#{$i} { top: calc(var(--size) * #{$i}); }
+  // .right-#{$i} { right: calc(var(--size) * #{$i}); }
+  // .left-#{$i} { left: calc(var(--size) * #{$i}); }
+
+  .z-#{$i} { z-index: $i; }
+}

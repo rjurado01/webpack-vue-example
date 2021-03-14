@@ -4,3 +4,9 @@
   grid-column-gap: 1em;
   grid-row-gap: 1em;
 }
+
+@for $var from 2 through 3 {
+  .col-span-#{$var}	{
+    grid-column: span $var / span $var;
+  }
+}

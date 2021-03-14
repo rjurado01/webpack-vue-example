@@ -1,3 +1,23 @@
 @charset 'UTF-8';
 
+// ABEM
+
+:root {
+  --size: 0.25rem;
+  --radius: 3px;
+
+  --color-background: #FFBB00;
+  --color-blue: #206bc4;
+  --color-blue-lt: #edf3fb;
+  --color-blue-dt: #1d60b0;
+
+  --color-gray: #656d77;
+  --color-gray-lt: #f4f6fa;
+  --color-gray-dt: #5b626b;
+}
+
+
 @import 'core/_grid.scss';
+@import 'core/_button.scss';
+@import 'core/_input.scss';
+@import 'core/_utils.scss';

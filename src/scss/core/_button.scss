@@ -1,23 +1,35 @@
 .btn {
   display: inline-block;
   cursor: pointer;
-  padding: $size-2 $size-3;
-  color: $gray-700;
-  background: $white;
-  font-weight: 600;
+  padding: calc(var(--size) * 2) calc(var(--size) * 4);
+  background: white;
+  font-weight: 500;
   font-size: 0.9rem;
-  border-radius: $radius;
+  border-radius: var(--radius);
   border: 1px solid;
-  border-color: $gray-300;
+  border-color: var(--color-blue);
+  color: var(--color-blue);
   height: 100%;
 
-  &:hover { background: $gray-100; }
+  &:hover { background: var(--color-blue-lt); }
 
-  &.btn-primary {
-    background: $primary;
-    color: $white;
-    border-color: $primary;
+  &.-primary {
+    background: var(--color-blue);
+    color: white;
+    border-color: var(--color-blue);
 
-    &:hover { background: darken($primary, 2%); }
+    &:hover { background: var(--color-blue-dt); }
+  }
+
+  &.-secondary {
+    background: var(--color-gray);
+    color: white;
+    border-color: var(--color-gray-dt);
+
+    &:hover { background: var(--color-gray-dt); }
+  }
+
+  &.-disabled {
+    opacity: 0.5;
   }
 }

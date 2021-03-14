@@ -1,16 +1,16 @@
 input, select {
   box-sizing : border-box;
-  padding: $size-2 $size-3;
+  padding: calc(var(--size) * 2) calc(var(--size) * 3);
   appearance: none;
 
-  color: $gray-800;
-  background-color: $white;
-  border: $border;
-  border-radius: $radius;
+  // color: $gray-800;
+  background-color: white;
+  // border: $border;
+  border-radius: var(--radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-  &::placeholder { color: $gray-500; }
-  &:focus { border-color: $blue; }
+  // &::placeholder { color: $gray-500; }
+  // &:focus { border-color: $blue; }
 
 
   &.error {
@@ -19,30 +19,30 @@ input, select {
 }
 
 select {
-  padding-right: $size-7;
+  // padding-right: $size-7;
   // background: $white url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center / .6rem;
 
-  background: $white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='0,0 8,0 4,4'/></svg>") no-repeat right 0.75rem bottom 36%;
+  background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='0,0 8,0 4,4'/></svg>") no-repeat right 0.75rem bottom 36%;
 
-  option { padding: 1.5rem 0; }
+  // option { padding: 1.5rem 0; }
 
-  &.open {
-    background: $white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='4,0 8,4, 0,4'/></svg>") no-repeat right 0.75rem bottom 36%;
-  }
+  // &.open {
+  //   background: $white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='4,0 8,4, 0,4'/></svg>") no-repeat right 0.75rem bottom 36%;
+  // }
 }
 
-.input-error-text {
-  color: $red;
-  font-size: 80%;
-  padding-top: $size-1;
-}
+// .input-error-text {
+//   color: $red;
+//   font-size: 80%;
+//   padding-top: $size-1;
+// }
 
-label {
-  font-weight: 600;
-  font-size: 0.875rem;
-}
+// label {
+//   font-weight: 600;
+//   font-size: 0.875rem;
+// }
 
-.inputs-top-label label {
-  display: block;
-  margin-bottom: $size-1;
-}
+// .inputs-top-label label {
+//   display: block;
+//   margin-bottom: $size-1;
+// }
