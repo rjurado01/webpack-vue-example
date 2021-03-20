@@ -1,15 +1,16 @@
-import DefaultLayout from 'js/layouts/default';
+import DefaultLayout from 'js/layouts/default'
 
-import store from 'js/store.js';
-import router from 'js/router.js';
+import store from 'js/store.js'
+import router from 'js/router.js'
+import i18n from 'js/i18n.js'
 
-require('scss/main.scss');
+require('scss/main.scss')
 
 Vue.createApp({
   setup() {
-    console.error('Initialized vue App !!')
+    console.info('Initialized vue App !!')
   },
   components: {
     DefaultLayout
   }
-}).use(store).use(router).mount('#app')
+}).use(store).use(router).use(i18n).mount('#app')

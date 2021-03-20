@@ -699,14 +699,6 @@
     "@babel/helper-create-regexp-features-plugin" "^7.12.13"
     "@babel/helper-plugin-utils" "^7.12.13"
 
-"@babel/polyfill@^7.0":
-  version "7.12.1"
-  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@babel/polyfill/-/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
-  integrity sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
-  dependencies:
-    core-js "^2.6.5"
-    regenerator-runtime "^0.13.4"
-
 "@babel/preset-env@^7.0":
   version "7.13.10"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@babel/preset-env/-/preset-env-7.13.10.tgz#b5cde31d5fe77ab2a6ab3d453b59041a1b3a5252"
@@ -837,6 +829,44 @@
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@discoveryjs/json-ext/-/json-ext-0.5.2.tgz#8f03a22a04de437254e8ce8cc84ba39689288752"
   integrity sha512-HyYEUDeIj5rRQU2Hk5HTB2uHsbRQpF70nvMhVzi+VJR0X+xNEhjPui4/kBf3VeH/wqD28PT4sVOm8qqLjBrSZg==
 
+"@intlify/core-base@9.0.0":
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@intlify/core-base/-/core-base-9.0.0.tgz#3de223b8532c535d022e5be58f7d56a26d2fb12f"
+  integrity sha512-dxqakT94EV2bFshG3LENQUPWX9yJFCga1BOwJ6mz7J8LnAYVB9Kxw7NRyE2ybN31USW2IUTQH6WWR1yDbCiefQ==
+  dependencies:
+    "@intlify/message-compiler" "9.0.0"
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/runtime" "9.0.0"
+    "@intlify/shared" "9.0.0"
+
+"@intlify/message-compiler@9.0.0":
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@intlify/message-compiler/-/message-compiler-9.0.0.tgz#8a1079f8aebcde33057ce769817691ce27ad3e0d"
+  integrity sha512-3oiLj+8z6koRYJwknazjilBsrqnJEAJywr/t39MYVy2yPmwOI1+NDfdDwM9U3ioA2RvsQEUICqW8gmjq1YIElw==
+  dependencies:
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/shared" "9.0.0"
+    source-map "0.6.1"
+
+"@intlify/message-resolver@9.0.0":
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@intlify/message-resolver/-/message-resolver-9.0.0.tgz#0077ec24606b6486d238bdef9044e27729f4782c"
+  integrity sha512-LVK4cwu1l33yvBy0UQkEdXm6pZUcbbiparobruJXz+U8jRTmYHBprN59j59YKXEKcV43cHfzNveaQIm84bgxvQ==
+
+"@intlify/runtime@9.0.0":
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@intlify/runtime/-/runtime-9.0.0.tgz#bf9415ff90c746a9be38a5c32f71cbbe9848eee8"
+  integrity sha512-UqCKduZezb5/qA+XPRfHVvXoLmhnQ8iKMyCh0Lg3ZwjW2vOMep/AgZU3T9cgESe67r4buPYHs7nOBSHbTdjNxg==
+  dependencies:
+    "@intlify/message-compiler" "9.0.0"
+    "@intlify/message-resolver" "9.0.0"
+    "@intlify/shared" "9.0.0"
+
+"@intlify/shared@9.0.0":
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@intlify/shared/-/shared-9.0.0.tgz#d85b3b5f9033f377c5cf2202cf2459aa49948f36"
+  integrity sha512-0r4v7dnY8g/Jfx2swUWy2GyfH/WvIpWvkU4OIupvxDTWiE8RhcpbOCVvqpVh/xGi0proHQ/r2Dhc0QSItUsfDQ==
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -952,6 +982,11 @@
   dependencies:
     "@vue/compiler-core" "3.0.7"
     "@vue/shared" "3.0.7"
+
+"@vue/devtools-api@^6.0.0-beta.5":
+  version "6.0.0-beta.7"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/@vue/devtools-api/-/devtools-api-6.0.0-beta.7.tgz#1d306613c93b9a837a3776b1b9255502662f850f"
+  integrity sha512-mIfqX8ZF6s2ulelIzfxGk9sFoigpoeK/2/DlWrtBGWfvwaK3kR1P2bxNkZ0LbJeuKHfcRP6hGZtGist7nxUN9A==
 
 "@vue/reactivity@3.0.7":
   version "3.0.7"
@@ -1778,11 +1813,6 @@ core-js-compat@^3.8.1, core-js-compat@^3.9.0:
   dependencies:
     browserslist "^4.16.3"
     semver "7.0.0"
-
-core-js@^2.6.5:
-  version "2.6.12"
-  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
-  integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
 
 core-js@^3.0, core-js@^3.4.4:
   version "3.9.1"
@@ -4638,15 +4668,15 @@ source-map-url@^0.4.0:
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/source-map-url/-/source-map-url-0.4.1.tgz#0af66605a745a5a2f91cf1bbf8a7afbc283dec56"
   integrity sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==
 
+source-map@0.6.1, source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
+  version "0.6.1"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+
 source-map@^0.5.0, source-map@^0.5.6:
   version "0.5.7"
   resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
   integrity sha1-igOdLRAh0i0eoUyA2OpGi6LvP8w=
-
-source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.0, source-map@~0.6.1:
-  version "0.6.1"
-  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
-  integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 source-map@^0.7.3, source-map@~0.7.2:
   version "0.7.3"
@@ -5035,10 +5065,14 @@ vue-awesome@^4.0:
   dependencies:
     core-js "^3.4.4"
 
-vue-i18n@^8.0:
-  version "8.24.1"
-  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/vue-i18n/-/vue-i18n-8.24.1.tgz#c3582bd61bb3a978f00c75e1ac850efc89b3916f"
-  integrity sha512-iqM+npjvI9SGOAYkw1Od/y4O74gpvn5WOHeb3K125TmDJssvR62tDMMLIasPmKNbePZ1BMZ6d5jOBsrB/cK8Lw==
+vue-i18n@^9.0.0:
+  version "9.0.0"
+  resolved "https://nexus.nosolosoftware.es/repository/npm_nss_group/vue-i18n/-/vue-i18n-9.0.0.tgz#a04c41d5ed3d5a068e923517bfaa0abcbc84e174"
+  integrity sha512-iks0eJDv/4cK/7tl/ooMUroNVVIGOK4kKS1PIHmPQk7QjT/sDfFM84vjPKgpARbw0GjJsOiADL43jufNfs9e9A==
+  dependencies:
+    "@intlify/core-base" "9.0.0"
+    "@intlify/shared" "9.0.0"
+    "@vue/devtools-api" "^6.0.0-beta.5"
 
 vue-resource@^1.0:
   version "1.5.2"
