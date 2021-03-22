@@ -1,0 +1,31 @@
+.select {
+  position: relative;
+  width: 100%;
+
+  input {
+    width: 100%;
+    cursor: pointer;
+    padding-right: calc(var(--size) * 7);
+    background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='0,0 8,0 4,4'/></svg>") no-repeat right 0.75rem bottom 36%;
+  }
+
+  .options {
+    position: absolute;
+    width: calc(100% - 2px);
+    background: white;
+    border: 1px solid rgba(0, 40, 100, 0.12);
+
+    .option {
+      padding: calc(var(--size) * 2) calc(var(--size) * 3);
+      cursor: pointer;
+
+      &:not(:first-child) {
+        border-top: 1px solid rgba(0, 40, 100, 0.12);
+      }
+
+      &:hover {
+        background-color: var(--color-blue-lt);
+      }
+    }
+  }
+}

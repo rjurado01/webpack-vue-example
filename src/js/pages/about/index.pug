@@ -1,2 +1,70 @@
 div
-  h1 About
+  h2 Grid
+
+    .grid
+      div Uno
+      div Dos
+      div Tres
+
+  h2 Buttons
+
+  button.btn.mr-1 Default
+  button.btn.-primary.mr-1 Primary
+  button.btn.-secondary.mr-1 Secondary
+
+  h2 Input
+
+  p
+    label Input
+    input(placeholder="Write here...")
+  p
+    label Input with error
+    input.-error(placeholder="Write here...")
+
+
+  h2 Select
+
+  p
+    .select(style="width: 100px")
+      input(readonly=true)
+
+      .options.hidden
+        .option Option 1
+        .option Option 2
+        .option Option 3
+
+  p
+    select
+      option Option 1
+      option Option 2
+      option Option 3
+
+  p
+    select.-error
+      option Option 1
+
+  h2 Table
+
+  table.-striped.-hover
+    thead
+      tr
+        th Head 1
+        th Head 2
+        th Head 3
+
+    tbody
+      tr(v-for="i in 5")
+        td A {{ i }}
+        td B {{ i }}
+        td C {{ i }}
+
+  h2 Panel
+
+  .panel Texto del panel
+
+  h2 Menu
+
+  .menu
+    a Link 1
+    a Link 2
+    a Link 3

@@ -1,28 +1,32 @@
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+
 table {
   width: 100%;
   text-align: left;
   border-spacing: 0;
+  background: white;
 
-  &.table-striped {
+  &.-striped {
     tbody {
       tr:nth-of-type(odd) {
-        background: $gray-100;
+        background: #f8f9fa;
       }
     }
   }
 
-  &.table-hover {
+  &.-hover {
     tbody {
       tr {
         &:hover {
-          background: $gray-200;
+          background: var(--color-hover);
         }
       }
     }
   }
 
   // Scollable tables
-  &.table-scroll {
+  &.-scroll {
     display: block;
     overflow-x: auto;
     padding-bottom: .75rem;
@@ -30,8 +34,8 @@ table {
   }
 
   td, th {
-    border-bottom: $border;
-    padding: $size-3 $size-2;
+    border-bottom: var(--border);
+    padding: calc(var(--size) * 3) calc(var(--size) * 2);
   }
 
   th {

@@ -1,0 +1,11 @@
+select {
+  padding-right: calc(var(--size) * 7);
+
+  background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='0,0 8,0 4,4'/></svg>") no-repeat right 0.75rem bottom 36%;
+
+  option { padding: 1.5rem 0; }
+
+  &.-open {
+    background: white url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' fill='%23999'><polygon points='4,0 8,4, 0,4'/></svg>") no-repeat right 0.75rem bottom 36%;
+  }
+}

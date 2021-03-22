@@ -5,8 +5,10 @@
 :root {
   --size: 0.25rem;
   --radius: 3px;
+  --border: 1px solid rgba(0, 40, 100, 0.12);
 
   --color-background: #FFBB00;
+
   --color-blue: #206bc4;
   --color-blue-lt: #edf3fb;
   --color-blue-dt: #1d60b0;
@@ -14,10 +16,47 @@
   --color-gray: #656d77;
   --color-gray-lt: #f4f6fa;
   --color-gray-dt: #5b626b;
-}
 
+  --color-red: #d63939;
+  --color-text: #495057;
+
+  --color-hover: var(--color-blue-lt);
+}
 
 @import 'core/_grid.scss';
 @import 'core/_button.scss';
 @import 'core/_input.scss';
+@import 'core/_select.scss';
+@import 'core/_table.scss';
+@import 'core/_panel.scss';
+@import 'core/_menu.scss';
 @import 'core/_utils.scss';
+
+* {
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #f5f7fb;
+  color: var(--color-text);
+  font-weight: 400;
+  height: 100%;
+  margin: 0;
+}
+
+header {
+  height: calc(var(--size) * 16);
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(0, 40, 100, 0.12);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue);
+  cursor: pointer;
+}

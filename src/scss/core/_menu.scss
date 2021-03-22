@@ -1,23 +1,20 @@
 .menu {
-  position: absolute;
-  min-width: $size-40;
-  right: 0;
+  min-width: calc(var(--size) * 40);
   z-index: 3;
   background: white;
-  border: $border;
-  padding-top: $size-2;
-  padding-bottom: $size-2;
+  border: var(--border);
+  padding-top: 0.5rem;
+  padding-bottom: calc(var(--size) * 2);
 
   a {
     display: block;
-    padding: $size-1 $size-4;
-    color: $text-color-light;
+    padding: calc(var(--size) * 1) calc(var(--size) * 4);
 
     svg {
-      height: $size-4;
-      width: $size-4;
+      height: calc(var(--size) * 4);
+      width: calc(var(--size) * 4);
       vertical-align: middle;
-      margin-right: $size-2;
+      margin-right: calc(var(--size) * 2);
     }
 
     span {
@@ -25,7 +22,7 @@
     }
 
     &:hover {
-      background: $light;
+      background: var(--color-hover);
     }
   }
 }
