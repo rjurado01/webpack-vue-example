@@ -2,6 +2,22 @@
 
 // ABEM
 
+$blue: #467fcf;
+$azure: #45aaf2;
+$indigo: #6574cd;
+$purple: #a55eea;
+$pink: #f66d9b;
+$red: #cd201f;
+$soft-red: #F56C6C;
+$orange: #fd9644;
+$yellow: #f1c40f;
+$lime: #7bd235;
+$green: #5eba00;
+$teal: #2bcbba;
+$cyan: #17a2b8;
+$white: #ffffff;
+$gray: #656d77;
+
 :root {
   --size: 0.25rem;
   --radius: 3px;
@@ -9,18 +25,33 @@
 
   --color-background: #FFBB00;
 
-  --color-blue: #206bc4;
-  --color-blue-lt: #edf3fb;
-  --color-blue-dt: #1d60b0;
+  --color-blue: #{$blue};
+  --color-blue-light: #{lighten($blue, 10%)};
+  --color-blue-lighter: #{lighten($blue, 20%)};
+  --color-blue-lightest: #{lighten($blue, 40%)};
+  --color-blue-light: #{darken($blue, 10%)};
+  --color-blue-lighter: #{darken($blue, 20%)};
+  --color-blue-lightest: #{darken($blue, 40%)};
 
-  --color-gray: #656d77;
-  --color-gray-lt: #f4f6fa;
-  --color-gray-dt: #5b626b;
+  --color-gray: #{$gray};
 
-  --color-red: #d63939;
+  --color-red: #{$red};
+  --color-red-lightest: #{lighten($red, 45%)};
+
   --color-text: #495057;
 
   --color-hover: var(--color-blue-lt);
+
+
+  --color-blue-l: lighten(#206bc4, 20%);
+}
+
+@function color($color-name) {
+  @return var(--color-#{$color-name});
+}
+
+@function size($size) {
+  @return calc(var(--size) * #{$size});
 }
 
 @import 'core/_grid.scss';

@@ -1,6 +1,6 @@
 input, select {
   box-sizing : border-box;
-  padding: calc(var(--size) * 2) calc(var(--size) * 3);
+  padding: size(2) size(3);
   appearance: none;
 
   background-color: white;
@@ -8,15 +8,20 @@ input, select {
   border-radius: var(--radius);
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 
-  &::placeholder { color: var(--color-gray); }
+  &::placeholder { color: color(gray); }
   &:focus {
     outline: 0;
-    border-color: var(--color-blue);
+    border-color: color(blue-lighter);
+    box-shadow: 0 0 0 0.25rem color(blue-lightest);
   }
 
 
   &.-error {
-    border-color: var(--color-red);
+    border-color: color(red);
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem color(red-lightest);
+    }
   }
 }
 
@@ -24,5 +29,5 @@ label {
   font-weight: 600;
   font-size: 0.875rem;
   display: block;
-  margin-bottom: var(--size);
+  margin-bottom: size(1);
 }
