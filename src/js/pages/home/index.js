@@ -1,10 +1,15 @@
 import template from './index.pug';
-import component from 'js/components/example/index.js'
+import exampleComponent from 'js/components/example/index.js'
 
 export default {
   template: template(),
   components: {
-    component
+    exampleComponent
+  },
+  data() {
+    return {
+      users: null
+    }
   },
   computed: {
     count() {
@@ -17,6 +22,12 @@ export default {
   methods: {
     increment() {
       this.$store.commit('increment')
+    },
+
+    loadUsers() {
+      axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+        this.users = response.data
+      })
     }
   }
 }
