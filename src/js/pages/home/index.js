@@ -1,5 +1,6 @@
 import template from './index.pug';
 import exampleComponent from 'js/components/example/index.js'
+import { useI18n } from 'vue-i18n'
 
 export default {
   template: template(),
@@ -17,7 +18,11 @@ export default {
     }
   },
   setup() {
+    const { t } = useI18n()
+
     console.log('home')
+
+    return { t }
   },
   methods: {
     increment() {

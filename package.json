@@ -15,7 +15,7 @@
     "uglify-js": "^3.0",
     "vue": "^3.0",
     "vue-awesome": "^4.0",
-    "vue-i18n": "^9.0.0",
+    "vue-i18n": "^9.2.0-beta.7",
     "vue-resource": "^1.0",
     "vue-router": "^4.0",
     "vuex": "^4.0.0"
