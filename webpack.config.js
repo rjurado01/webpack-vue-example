@@ -24,17 +24,11 @@ module.exports = env => {
         },
         {
           test: /\.(jpe?g|png|gif|svg|woff2?|ttf|eot)$/i, // compile scss files
+          type: 'asset/resource',
           include: [
             path.resolve(__dirname, 'src/assets'),
             path.resolve(__dirname, 'src/scss/assets')
-          ],
-          use: {
-            loader: 'file-loader?name=assets/[fullhash].[ext]',
-            options: {
-              outputPath: 'assets',
-              esModule: false
-            }
-          }
+          ]
         },
         {
           test: /\.pug$/, // compile .pug templates
@@ -58,13 +52,7 @@ module.exports = env => {
     },
     plugins: [
       new webpack.DefinePlugin({
-        API_HOST: JSON.stringify(process.env.API_HOST) || "'http://localhost:3000'",
-        __VUE_OPTIONS_API__: true,
-        __VUE_PROD_DEVTOOLS__: false,
-        __VUE_I18N_FULL_INSTALL__: false,
-        __VUE_I18N_LEGACY_API__: true,
-        __VUE_I18N_PROD_DEVTOOLS__: false,
-        __INTLIFY_PROD_DEVTOOLS__: false
+        API_HOST: JSON.stringify(process.env.API_HOST) || "'http://localhost:3000'"
       }),
       new HtmlWebpackPLugin({ // compile index.ejs and inject js
         template: 'src/index.ejs',
@@ -72,10 +60,10 @@ module.exports = env => {
       }),
       new webpack.ProvidePlugin({
         Vue: 'vue',
-        axios: 'axios'
+        _: 'lodash'
       })
     ],
-    devtool: 'source-map'
+    devtool: 'eval-source-map'
   };
 
   // Entorno de Desarrollo
