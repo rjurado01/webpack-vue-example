@@ -91,9 +91,11 @@ module.exports = env => {
     });
 
     config.devServer = {
-      disableHostCheck: true,
-      contentBase: path.join(__dirname, 'dev'),
-      port: process.env.PORT || 8000
+      allowedHosts: 'all',
+      port: process.env.PORT || 8000,
+      static: {
+        directory: path.join(__dirname, 'dev')
+      }
     };
 
     config.plugins.push(new CleanWebpackPlugin({
