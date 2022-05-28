@@ -6,7 +6,9 @@ import i18n from 'js/i18n.js'
 
 require('scss/main.scss')
 
-Vue.createApp({
+import { createApp } from 'vue'
+
+createApp({
   setup() {
     console.info('Initialized vue App !!')
   },

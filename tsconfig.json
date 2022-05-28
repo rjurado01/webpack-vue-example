@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "typeRoots": ["./node_modules/@types", "./custom_typings"]
+  },
+  "include": [
+    "src/js/**/*",
+    "src/js/**/*.pug"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

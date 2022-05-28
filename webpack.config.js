@@ -7,19 +7,19 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Entorno Base
 module.exports = env => {
   config = {
-    entry: './src/js/main.js',
+    entry: './src/js/main.ts',
     output: {
       filename: 'application.js'
     },
     module: {
       rules: [
         {
-          test: /\.js$/, // compile javascript files
+          test: /\.(tsx?|js)$/,
           include: [
             path.resolve(__dirname, 'src')
           ],
           use: {
-            loader: 'babel-loader'
+            loader: 'ts-loader'
           }
         },
         {
@@ -48,7 +48,8 @@ module.exports = env => {
       ],
       alias: { // make vue global accesible
         'vue$': 'vue/dist/vue.esm-bundler'
-      }
+      },
+      extensions: ['.tsx', '.ts', '.js', '.pug']
     },
     plugins: [
       new webpack.DefinePlugin({
@@ -64,7 +65,7 @@ module.exports = env => {
         favicon: 'src/assets/favicon.ico'
       }),
       new webpack.ProvidePlugin({
-        Vue: 'vue',
+        // Vue: 'vue',
         _: 'lodash'
       })
     ],
