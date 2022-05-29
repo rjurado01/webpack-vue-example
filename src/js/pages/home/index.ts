@@ -1,10 +1,11 @@
+import { defineComponent } from 'vue';
 import template from './index.pug';
 import exampleComponent from 'js/components/example/index.js'
 import hello from 'js/components/hello'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 
-export default {
+export default defineComponent({
   template: template(),
   components: {
     hello,
@@ -17,25 +18,27 @@ export default {
     }
   },
   computed: {
-    countPlusOne(): number {
-      return 3
-      // return this.$store.state.count
+    vuexCount(): number {
+      return this.$store.state.count
     }
   },
   setup() {
-    const aux = ref<String>('aux')
+    const text = ref<String>('Ref text')
 
     const { t } = useI18n()
 
     console.log('home')
 
-    return { t, aux }
+    return { t, text }
   },
   methods: {
     increment() : void {
-      // this.$store.commit('increment')
-      // this.count += 1
+      this.count += 1
     },
+
+    incrementVuexCount() : void {
+      this.$store.commit('increment')
+    }
 
     // loadUsers() {
     //   axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
@@ -43,4 +46,4 @@ export default {
     //   })
     // }
   }
-}
+})

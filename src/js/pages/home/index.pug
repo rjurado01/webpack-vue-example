@@ -3,15 +3,19 @@ div
 
   hello(name="John")
 
+  p {{ text }}
+
   hr
 
   p I18n: {{ t('example') }}
 
   hr
 
-  p Vuex Count: {{ count }}
+  p Local Count: {{ count }}
+  p Vuex Count: {{ vuexCount }}
 
-  button(@click="increment") Increment
+  button(@click="increment") Increment Local
+  button(@click="incrementVuexCount") Increment Vuex
 
   hr
 
@@ -19,6 +23,6 @@ div
 
   hr
 
-  button(@click="loadUsers") Load Users
+  //- button(@click="loadUsers") Load Users
 
   p {{ users }}
