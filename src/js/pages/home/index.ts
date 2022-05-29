@@ -1,9 +1,12 @@
 import { defineComponent } from 'vue';
-import template from './index.pug';
-import exampleComponent from 'js/components/example/index.js'
-import hello from 'js/components/hello'
 import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
+import User from 'js/types/user'
+
+import exampleComponent from 'js/components/example/index.js'
+import hello from 'js/components/hello'
+
+import template from './index.pug';
 
 export default defineComponent({
   template: template(),
@@ -14,7 +17,7 @@ export default defineComponent({
   data() {
     return {
       count: 25 as number,
-      users: null
+      users: null as User[] | unknown
     }
   },
   computed: {
@@ -23,7 +26,7 @@ export default defineComponent({
     }
   },
   setup() {
-    const text = ref<String>('Ref text')
+    const text = ref<string>('Ref text')
 
     const { t } = useI18n()
 
@@ -38,12 +41,18 @@ export default defineComponent({
 
     incrementVuexCount() : void {
       this.$store.commit('increment')
-    }
+    },
 
-    // loadUsers() {
+    loadUsers() {
+      const  users: User[] = [
+        {name: 'A', email: 'a@email.com', age: 21}
+      ];
+
+      this.users = users
+
     //   axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
     //     this.users = response.data
     //   })
-    // }
+    }
   }
 })

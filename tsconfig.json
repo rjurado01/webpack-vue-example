@@ -15,7 +15,11 @@
     "sourceMap": true,
     "baseUrl": "./src",
     "outDir": "./dist",
-    "typeRoots": ["./node_modules/@types", "./custom_typings"]
+    "typeRoots": [
+      "./node_modules/@types",
+      "./custom_typings",
+      "./types"
+    ]
   },
   "include": [
     "src/js/**/*",
