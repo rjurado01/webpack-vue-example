@@ -1,6 +1,7 @@
-import { defineComponent } from 'vue';
+import { defineComponent, provide, ref } from 'vue';
 import { useI18n } from 'vue-i18n'
-import { ref } from 'vue'
+import Axios from 'axios'
+
 import User from 'js/types/user'
 
 import exampleComponent from 'js/components/example/index.js'
@@ -32,7 +33,10 @@ export default defineComponent({
 
     console.log('home')
 
-    return { t, text }
+    const time = ref<number>((new Date).getTime())
+    provide('time', time)
+
+    return { t, text, time }
   },
   methods: {
     increment() : void {
@@ -43,16 +47,23 @@ export default defineComponent({
       this.$store.commit('increment')
     },
 
-    loadUsers() {
+    updateTime() : void {
+      this.time = (new Date).getTime()
+    },
+
+    loadStaticUsers() {
       const  users: User[] = [
-        {name: 'A', email: 'a@email.com', age: 21}
+        {name: 'A', email: 'a@email.com', age: 21},
+        {name: 'B', email: 'b@email.com', age: 22}
       ];
 
       this.users = users
+    },
 
-    //   axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
-    //     this.users = response.data
-    //   })
+    loadRemoteUsers() {
+      Axios.get('https://jsonplaceholder.typicode.com/users').then(response => {
+        this.users = response.data.map((item : any) => <User> item)
+      })
     }
   }
 })

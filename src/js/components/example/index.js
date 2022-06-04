@@ -1,3 +1,5 @@
+import { inject } from 'vue'
+
 import template from './index.pug';
 
 export default {
@@ -10,5 +12,10 @@ export default {
   created() {
     this.users.push({name: 'user1', email: 'user1@email.com'})
     this.users.push({name: 'user2', email: 'user2@email.com'})
+  },
+  setup() {
+    const time = inject('time')
+
+    return {time}
   }
 }

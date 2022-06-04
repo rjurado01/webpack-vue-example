@@ -20,10 +20,12 @@ div
   hr
 
   example-component
+    button(@click="updateTime" style="margin-bottom: 10px;") Update Time
 
   hr
 
-  button(@click="loadUsers") Load Users
+  button(@click="loadStaticUsers") Load Static Users
+  button(@click="loadRemoteUsers") Load Remote Users
 
   ul
     li(v-for="user in users")
